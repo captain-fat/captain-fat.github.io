@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>巴意行</title>
+    <link href="/2020/02/17/%E5%B7%B4%E6%84%8F%E8%A1%8C/"/>
+    <url>/2020/02/17/%E5%B7%B4%E6%84%8F%E8%A1%8C/</url>
+    
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="3da5428add2b443a31ca88f48ebcad984eb535b9aed4de672bd57fd4f84b36ec">b361f6afffd4cdc320fb8b8f98e4c041cd06761d730f3940ffd77ee89a134807426f56c704e70b4c8f174e74887b85e75dea090e440beef8f4e48aff4d2cfb37</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <categories>
+      
+      <category>旅行</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>旅行</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>test</title>
     <link href="/2020/02/17/test/"/>
     <url>/2020/02/17/test/</url>
