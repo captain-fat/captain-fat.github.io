@@ -144,6 +144,68 @@
     
     
     <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2020/02/19/arkdown%E7%94%A8%E6%B3%95/">
+        <p class="h4 index-header">Markdown用法（转载）</p>
+      </a>
+
+      <a href="/2020/02/19/arkdown%E7%94%A8%E6%B3%95/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">Markdown 是一种轻量级的「标记语言」，优点在于
+
+专注你的文字内容而不是排版样式。
+
+轻松的导出 HTML、PDF 和本身的 .md 文件。
+
+纯文本内容，兼容所有的文本编辑器与字处理软件。
+
+可读，直观。适合所有人的写作语言。
+
+并且具有以下特点：
+
+
+自动生成目录
+
+代码块高亮
+
+引用展示
+
+表格插入
+
+图片插入
+
+强调显示
+
+列表显示
+
+自动URL链接  
+
+
+
+Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些。
+
+语法简明概述分段 两个回车换行 两个空格 + 回车标题 # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题强调 文字 ， 文字 ， 文字 ， 文字 ， 文字引用 &gt; 注意后面紧跟个空格表格 - 和 | 分割行和列 ， : 控制对其方式代码块 四个空格 开头或， 使用代码内容链接 文字图片  ，地址可以是本地路劲，也可以是网络地址列表 * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格
+标题方法一# </div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-19&nbsp;&nbsp;
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020/02/19/%E7%88%AC%E8%99%AB-get%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B/">
         <p class="h4 index-header">爬虫-get请求示例</p>
       </a>
@@ -160,7 +222,7 @@
 在Chrome浏览器中，我们可以看到，请求的数据包含在请求头的Query String Parameters中，其实我们可以将这些字段都写在程序中，也可以摘取其中必要的部分，而不是全部。
 
 比较关键的是wd字段，这里我们只是把wd字段提取出来，写成词典，然后通过程序编码，配置成GET请求的url，再通过一般的程序抓取手段，可以得到我们查询的页面。程序如下：
-  urllib有些用法变了，更新了下
+  urllib有些用法变了，更新了下(2020/2/19)
 import urllib
 
 url = &quot;http://www.baidu.com/s&quot;
@@ -168,7 +230,7 @@ data = {
     &#39;wd&#39;: &quot;测试&quot;
 }
 
-data = urllib.parse.urlencode(data) #编码工作，由dict转成s</div>
+data = urllib.parse.urlencode(data) #编码</div>
         </div>
       </a>
 
