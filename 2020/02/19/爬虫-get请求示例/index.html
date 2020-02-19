@@ -16,7 +16,7 @@
   <meta name="description" content="A Place where You Can Know about Me">
   <meta name="author" content="Yifan">
   <meta name="keywords" content="">
-  <title>Categories ~ Yifan&#39;s Place</title>
+  <title>爬虫-get请求示例 ~ Yifan&#39;s Place</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -39,7 +39,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -106,7 +106,7 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
+    <div class="view intro-2" id="background" false
          style="background: url('/img/home_bgim.png')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
@@ -116,6 +116,35 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Wednesday, February 19th 2020, 1:37 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    323 字
+                  </span>&nbsp;
+                
+
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -127,22 +156,112 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>GET请求一般用于我们向服务器查询的过程，比如说，百度搜索“宁哥的小站”，如图所示，浏览器的url会跳转成如图所示</p>
+<p><img src="%5Cimages%5Cpasted-0.png%5C" srcset="/img/loading.gif" alt="upload successful"></p>
+<p>在其中我们可以看到在”<a href="http://www.baidu.com/s?”" target="_blank" rel="noopener">http://www.baidu.com/s?”</a> 之后出现一个长长的字符串，其中就包含我们要查询的关键词。那么，我们在编程过程中，如何配置这段字符串参数呢？</p>
+<p>在Chrome浏览器中，我们可以看到，请求的数据包含在请求头的Query String Parameters中，其实我们可以将这些字段都写在程序中，也可以摘取其中必要的部分，而不是全部。</p>
+<p><img src="%5Cimages%5Cpasted-1.png%5C" srcset="/img/loading.gif" alt="upload successful"></p>
+<p>比较关键的是wd字段，这里我们只是把wd字段提取出来，写成词典，然后通过程序编码，配置成GET请求的url，再通过一般的程序抓取手段，可以得到我们查询的页面。程序如下：</p>
+<p>  <strong><em>urllib有些用法变了，更新了下</em></strong></p>
+<pre><code class="python">import urllib
+
+url = &quot;http://www.baidu.com/s&quot;
+data = {
+    &#39;wd&#39;: &quot;测试&quot;
+}
+
+data = urllib.parse.urlencode(data) #编码工作，由dict转成string
+full_url = url + &#39;?&#39; + data #Get请求发送
+print(full_url)
+response = urllib.request.urlopen(full_url)
+print(response.read())</code></pre>
+<p>转载请注明：宁哥的小站 » 3. 网络爬虫-GET请求示例</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
                 
-
-<ul class="category-tree-list"><li class="category-tree-list-item"><a class="category-tree-list-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a><span class="category-tree-list-count">1</span></li><li class="category-tree-list-item"><a class="category-tree-list-link" href="/categories/%E9%95%BF%E7%9F%A5%E8%AF%86/">长知识</a><span class="category-tree-list-count">1</span></li></ul>
-
-
-              </div>
-            </div>
+                  <a class="hover-with-bg" href="/categories/%E9%95%BF%E7%9F%A5%E8%AF%86">长知识</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/python">python</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'http://yifan.press/2020/02/19/爬虫-get请求示例/';
+        this.page.identifier = '/2020/02/19/爬虫-get请求示例/';
+      };
+      var oldLoad = window.onload;
+      window.onload = function () {
+        var d = document, s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.src = '//' + 'visitor' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="nofollow noopener noopener">comments
+        powered by Disqus.</a></noscript>
+  </div>
+
+
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -221,6 +340,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -261,7 +385,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Category&nbsp;",
+        "爬虫-get请求示例&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

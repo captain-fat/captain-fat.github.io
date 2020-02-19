@@ -144,6 +144,58 @@
     
     
     <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/2020/02/19/%E7%88%AC%E8%99%AB-get%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B/">
+        <p class="h4 index-header">爬虫-get请求示例</p>
+      </a>
+
+      <a href="/2020/02/19/%E7%88%AC%E8%99%AB-get%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">GET请求一般用于我们向服务器查询的过程，比如说，百度搜索“宁哥的小站”，如图所示，浏览器的url会跳转成如图所示
+
+在其中我们可以看到在”http://www.baidu.com/s?” 之后出现一个长长的字符串，其中就包含我们要查询的关键词。那么，我们在编程过程中，如何配置这段字符串参数呢？
+在Chrome浏览器中，我们可以看到，请求的数据包含在请求头的Query String Parameters中，其实我们可以将这些字段都写在程序中，也可以摘取其中必要的部分，而不是全部。
+
+比较关键的是wd字段，这里我们只是把wd字段提取出来，写成词典，然后通过程序编码，配置成GET请求的url，再通过一般的程序抓取手段，可以得到我们查询的页面。程序如下：
+  urllib有些用法变了，更新了下
+import urllib
+
+url = &quot;http://www.baidu.com/s&quot;
+data = {
+    &#39;wd&#39;: &quot;测试&quot;
+}
+
+data = urllib.parse.urlencode(data) #编码工作，由dict转成s</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-19&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E9%95%BF%E7%9F%A5%E8%AF%86">长知识</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/python">python</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
       <a href="/2020/02/17/%E5%B7%B4%E6%84%8F%E8%A1%8C/">
         <p class="h4 index-header">巴意行</p>
       </a>
