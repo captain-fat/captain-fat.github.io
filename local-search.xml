@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>正则表达式学习</title>
+    <link href="/2020/02/22/%E9%95%BF%E7%9F%A5%E8%AF%86/%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2020/02/22/%E9%95%BF%E7%9F%A5%E8%AF%86/%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="基本认识和元字符"><a href="#基本认识和元字符" class="headerlink" title="基本认识和元字符"></a>基本认识和元字符</h1><p>*任意长度字符串<br>？长度为1的任意字符串  </p><h2 id="元字符概念"><a href="#元字符概念" class="headerlink" title="元字符概念"></a><strong>元字符概念</strong></h2><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>.</td><td>匹配出换行符外任意字符</td></tr><tr><td>\w</td><td>匹配字母或数字或下划线或汉字</td></tr><tr><td>\s</td><td>匹配任意的空白符</td></tr><tr><td>\d</td><td>匹配数字</td></tr><tr><td>\b</td><td>匹配单词的开始或结束</td></tr><tr><td>^</td><td>匹配字符串的开始</td></tr><tr><td>$</td><td>匹配字符串的结束</td></tr></tbody></table><h2 id="反义"><a href="#反义" class="headerlink" title="反义"></a><strong>反义</strong></h2><table><thead><tr><th>语法</th><th>说明</th></tr></thead><tbody><tr><td>\W</td><td>匹配任意不是字母或数字或下划线或汉字的字符</td></tr><tr><td>\S</td><td>匹配任意不是空白符的字符</td></tr><tr><td>\D</td><td>匹配非数字的字符</td></tr><tr><td>\B</td><td>匹配不是单词的开始或结束的位置</td></tr><tr><td>[^x]</td><td>匹配除了X意外的任意字符</td></tr><tr><td>[^aeiou]</td><td>匹配除了aeiou这几个字母意外的任意字符</td></tr></tbody></table><h2 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a><strong>字符转义</strong></h2><ul><li>匹配.或者?这样的字符</li><li>转义字符\</li><li>.*?</li></ul><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a><strong>注释</strong></h2><p><img src="/images/pasted-14.png" srcset="/img/loading.gif" alt="1"></p><h1 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h1><h2 id="重复模式"><a href="#重复模式" class="headerlink" title="重复模式"></a>重复模式</h2><table><thead><tr><th>语法</th><th>说明</th></tr></thead><tbody><tr><td>*</td><td>重复零次或者更多次</td></tr><tr><td>+</td><td>重复一次或者多次</td></tr><tr><td>？</td><td>重复零次或者一次</td></tr><tr><td>{n}</td><td>重复n次</td></tr><tr><td>{n,}</td><td>重复n次或者更多次</td></tr><tr><td>{n,m}</td><td>重复n到m次</td></tr></tbody></table><h2 id="分支条件"><a href="#分支条件" class="headerlink" title="分支条件"></a>分支条件</h2><p><img src="/images/pasted-15.png" srcset="/img/loading.gif" alt="2"><br>|表示分支条件  </p><blockquote><p>条件1：  </p></blockquote><p>0\d{2}-\d{8}<br>0然后两位数字-八位数字  </p><blockquote><p>条件二  </p></blockquote><p>0然后三位数字-七位数字<br>如果满足条件一就不执行条件二了</p><h2 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h2><p><img src="/images/pasted-16.png" srcset="/img/loading.gif" alt="3"><br>(?0\d{2}[)-]?\d{8}<br>（出现零次或者一次，然后0接下来两位数字，)-打包出现零次，然后八位数字<br><em>这个左右括号没有做平衡</em>  </p><h1 id="分组-amp-贪婪与懒惰"><a href="#分组-amp-贪婪与懒惰" class="headerlink" title="分组&amp;贪婪与懒惰"></a>分组&amp;贪婪与懒惰</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p><img src="/images/pasted-18.png" srcset="/img/loading.gif" alt="4"></p><h2 id="贪婪与懒惰"><a href="#贪婪与懒惰" class="headerlink" title="贪婪与懒惰"></a>贪婪与懒惰</h2><p><img src="/images/pasted-13.png" srcset="/img/loading.gif" alt="5"></p><p><strong>懒惰</strong>  </p><table><thead><tr><th>语法</th><th>说明</th></tr></thead><tbody><tr><td>*?</td><td>重复任意次，但尽可能少重复</td></tr><tr><td>+？</td><td>重复1次或更多次，但尽可能少重复</td></tr><tr><td>？？</td><td>重复0次或者1次，但尽可能少重复</td></tr><tr><td>{n,m}?</td><td>重复n到m次，但尽可能少重复</td></tr><tr><td>{n,}?</td><td>重复n次以上，但尽可能少重复</td></tr><tr><td>## 处理选项</td><td></td></tr></tbody></table><p><img src="/images/pasted-17.png" srcset="/img/loading.gif" alt="6"></p><h1 id="高阶讲解"><a href="#高阶讲解" class="headerlink" title="高阶讲解"></a>高阶讲解</h1><h2 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h2><p><img src="/images/pasted-19.png" srcset="/img/loading.gif" alt="7"></p><h2 id="零宽断言（真假）"><a href="#零宽断言（真假）" class="headerlink" title="零宽断言（真假）"></a>零宽断言（真假）</h2><p><img src="/images/pasted-20.png" srcset="/img/loading.gif" alt="8"></p><h2 id="负向零宽断言"><a href="#负向零宽断言" class="headerlink" title="负向零宽断言"></a>负向零宽断言</h2><p><img src="/images/pasted-21.png" srcset="/img/loading.gif" alt="9"></p><h2 id="平衡组-递归匹配"><a href="#平衡组-递归匹配" class="headerlink" title="平衡组/递归匹配"></a>平衡组/递归匹配</h2><p><img src="/images/pasted-22.png" srcset="/img/loading.gif" alt="10"></p><p><strong>例子</strong></p><p><img src="/images/pasted-23.png" srcset="/img/loading.gif" alt="11"></p><pre><code>&lt;                                        #最外层的左括号    [^&lt;&gt;]*                               #最外层的左括号后面的不是括号的内容    (       (           (?&#39;Open&#39;&lt;)                    #碰到了左括号，在黑板上写一个“open”          |           (?&#39;-Open&#39;&gt;)                   #碰到了右括号，擦掉一个“open”          |  [^&lt;&gt;]*                      #匹配右括号后面不是括号的内容       )+    )*    (?(Open)(?!))                        #在遇到最外层的右括号前面，判断黑板上还有没有没擦掉的“open”，有的话匹配失败&gt;                                        #最外层的右括号</code></pre><p><em>仅支持.net</em></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>长知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>正则表达式</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>python爬虫一：分析豆瓣中正在上映的电影短评</title>
     <link href="/2020/02/21/%E9%95%BF%E7%9F%A5%E8%AF%86/python%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98%E4%B8%80%EF%BC%9A%E5%88%86%E6%9E%90%E8%B1%86%E7%93%A3%E4%B8%AD%E6%9C%80%E6%96%B0%E7%94%B5%E5%BD%B1%E7%9A%84%E5%BD%B1%E8%AF%84/"/>
     <url>/2020/02/21/%E9%95%BF%E7%9F%A5%E8%AF%86/python%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98%E4%B8%80%EF%BC%9A%E5%88%86%E6%9E%90%E8%B1%86%E7%93%A3%E4%B8%AD%E6%9C%80%E6%96%B0%E7%94%B5%E5%BD%B1%E7%9A%84%E5%BD%B1%E8%AF%84/</url>
