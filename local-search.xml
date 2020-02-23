@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>正则表达式练习</title>
+    <link href="/2020/02/23/%E9%95%BF%E7%9F%A5%E8%AF%86/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BB%83%E4%B9%A0/"/>
+    <url>/2020/02/23/%E9%95%BF%E7%9F%A5%E8%AF%86/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BB%83%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>昨天学了点正则表达式，最后一个是实验课，需要写一个小爬虫，获取百度搜索关键词相应搜索页面的第一页，然后利用正则表达式选出其中的是个搜索结果的标题然后输入</p></blockquote><h1 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a><strong>整体思路</strong></h1><ul><li>构建GUI，一个输入文本框(获取关键词)，一个开始按钮，一个输出文本框框(输出搜索结果)</li><li>获得网页源代码，根据输入的关键词生成地址，并找到该地址的源码以便下一步使用</li><li>利用正则表达式对网页源码进行筛选，找到相应的搜索结果转换成字符串并输出</li></ul><h2 id="构建GUI"><a href="#构建GUI" class="headerlink" title="构建GUI"></a><strong>构建GUI</strong></h2><p>利用Pyqt带的Designer设计的<br><img src="/images/pasted-24.png" srcset="/img/loading.gif" alt="1"><br>上面的文本框输入文字，开始按钮，下面的大文本框输出文字</p><h2 id="网页源码爬取"><a href="#网页源码爬取" class="headerlink" title="网页源码爬取"></a><strong>网页源码爬取</strong></h2><p>一开始想用urllib进行爬取，不过好像百度有反扒机制，一开始没有加head头和后面加了head头都不行，会返回一个安全验证的页面<br><img src="/images/pasted-25.png" srcset="/img/loading.gif" alt="2"></p><pre><code class="python">import urllib.requesthead = {&#39;User-Agent&#39;:&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0&#39;}url = &quot;http://www.baidu.com/s&quot;data = {    &#39;wd&#39;: &quot;nihong&quot;}data = urllib.parse.urlencode(data)  # 编码工作，由dict转成stringfull_url = url + &#39;?&#39; + data  # Get请求发送request = urllib.request.Request(url = full_url, headers = head)response = urllib.request.urlopen(request)print(response.read().decode(&#39;utf-8&#39;))</code></pre><p>后面采用的是模拟浏览器渲染的方式，selenuim进行源码的爬取，但是速度会比较慢因为涉及到浏览器的渲染  </p><h2 id="正则表达式使用"><a href="#正则表达式使用" class="headerlink" title="正则表达式使用"></a><strong>正则表达式使用</strong></h2><p>用火狐的检查和谷歌浏览器的检查貌似代码顺序会不一样<br><img src="/images/pasted-26.png" srcset="/img/loading.gif" alt="火狐浏览器"></p><blockquote><p>火狐浏览器<br><img src="/images/pasted-27.png" srcset="/img/loading.gif" alt="谷歌浏览器"><br>谷歌浏览器</p></blockquote><p>一开始没发现的时候坑了好久<br>最终的正则表达式：</p><pre><code>&lt;div\s+class=&quot;(result|result-op)\s+c-container\s+.*?&lt;a.*?&gt;(.*?)&lt;/a&gt;</code></pre><h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><pre><code class="python">from main_window import Ui_MainWindowfrom PyQt5.QtWidgets import  QMainWindow, QApplicationfrom selenium import webdriverfrom selenium.webdriver.chrome.options import  Optionsimport timeimport urllibimport reimport sysclass my_main_window(QMainWindow, Ui_MainWindow):    def __init__(self):        super(my_main_window, self).__init__()        self.setupUi(self)        self.btn_start.clicked.connect(self.read_imput_text)        self.btn_start.clicked.connect(self.get_words)    def read_imput_text(self):        input_text = self.text_inputbox.toPlainText()        #配置浏览器，关闭界面        chrome_opt = Options()        chrome_opt.add_argument(&#39;---windows-size=1366,768&#39;)        chrome_opt.add_argument(&#39;--headless&#39;)        chrome_opt.add_argument(&#39;--disable-pu&#39;)        #配置url        url = &quot;http://www.baidu.com/s&quot;        data = {&#39;wd&#39;:input_text}        full_url = url + &#39;?&#39; + urllib.parse.urlencode(data)        #获取页面源码        browser = webdriver.Chrome(options=chrome_opt)        browser.get(full_url)        time.sleep(2)        self.page = browser.page_source        print(self.page)        browser.quit()    def get_words(self):        #正则表达式，提取关键词        pattern = re.compile(r&#39;&lt;div\s+class=&quot;(result|result-op)\s+c-container\s+.*?&lt;a.*?&gt;(.*?)&lt;/a&gt;&#39;, re.I | re.S)        results = re.finditer(pattern, self.page)        result = []        for i in results:            result.append(i.group(2))        pattern_clean = re.compile(r&quot;&lt;em&gt;|&lt;/em&gt;|&#39;|\[|\]&quot;, re.I | re.S)        clean_result = re.sub(pattern_clean, &#39;&#39;, str(result))        self.text_outputbox.setText(clean_result)if __name__ == &#39;__main__&#39;:    app = QApplication(sys.argv)    myWin = my_main_window()    myWin.show()    sys.exit(app.exec())</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>长知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+      <tag>正则表达式</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>正则表达式学习</title>
     <link href="/2020/02/22/%E9%95%BF%E7%9F%A5%E8%AF%86/%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0/"/>
     <url>/2020/02/22/%E9%95%BF%E7%9F%A5%E8%AF%86/%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AD%A6%E4%B9%A0/</url>
