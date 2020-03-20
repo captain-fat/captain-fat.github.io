@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content="A Place where You Can Know about Me">
+  <meta name="author" content="Yifan">
+  <meta name="keywords" content="">
+  <title>Android学习 ~ Yifan&#39;s Place</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Yifan's Place</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/home_bgim.png')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Friday, March 20th 2020, 5:30 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    3.7k 字
+                  </span>&nbsp;
+                
+
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h1 id="Basic-View"><a href="#Basic-View" class="headerlink" title="Basic View"></a>Basic View</h1><h2 id="TextView"><a href="#TextView" class="headerlink" title="TextView"></a>TextView</h2><p><strong>Reformat Code</strong>      <code>ctrl+alt+l</code></p>
+<pre><code class="java">//TextView所呈现的文字
+android:text=&quot;我爱Java&quot;
+
+//文字颜色
+android:textColor=&quot;#f00&quot;
+
+//文字尺寸
+android:textSize=&quot;20pt&quot;
+
+//文本框结尾处绘制图片  
+android:drawableEnd=&quot;@drawable/ic_launcher&quot;
+
+//不管内容多长，单行显示
+android:singleLine=&quot;true“
+
+//文字过长时，中间部分省略
+android:ellipsize=&quot;middle&quot;
+
+//全部字母大写
+android:textAllCaps=&quot;true&quot;
+
+//若文字为email或者电话号码，以特殊形式呈现
+android:autoLink=&quot;email|phone&quot;
+
+//文字为密码，以点代替
+android:password=&quot;true&quot;
+
+//文字阴影相关
+android:shadowColor=&quot;#0000ff&quot;
+android:shadowDx=&quot;10.0&quot;
+android:shadowDy=&quot;8.0&quot;
+android:sha5dowRadius=&quot;3.0&quot;
+
+//指定背景图案
+android:background=&quot;@drawable/bg_border&quot;</code></pre>
+<blockquote>
+<p><strong>java文件中修改</strong></p>
+</blockquote>
+<pre><code class="java">TextView textView = findViewById(R.id.mTextView);
+textView.setText(&quot;Test&quot;);
+textView.setTextColor(Color.Red);</code></pre>
+<blockquote>
+<p>跑马灯**</p>
+</blockquote>
+<pre><code class="java">android:focusable=&quot;true&quot;   android:marqueeRepeatLimit=&quot;marquee_forever&quot;
+android:ellipsize=&quot;marquee&quot;
+android:scrollHorizontally=&quot;true&quot;
+android:focusableInTouchMode=&quot;true&quot;
+android:singleLine=&quot;true&quot;//4.0以上需加</code></pre>
+<h2 id="ImageView"><a href="#ImageView" class="headerlink" title="ImageView"></a>ImageView</h2><pre><code class="java">android:src=&quot;@mipmap/ic_launcher&quot;</code></pre>
+<h2 id="Button-amp-ImageViewButton"><a href="#Button-amp-ImageViewButton" class="headerlink" title="Button &amp; ImageViewButton"></a>Button &amp; ImageViewButton</h2><pre><code class="xml">&lt;Button
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:id=&quot;@+id/mButton&quot;/&gt;
+&lt;ImageButton
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:src=&quot;@mipmap/ic_launcher&quot;
+        android:id=&quot;@+id/mImageButton&quot;/&gt;</code></pre>
+<blockquote>
+<p><strong>Java代码</strong></p>
+</blockquote>
+<pre><code class="java">Button mButton = findViewById(R.id.mButton);
+ImageButton mImageButton = findViewById(R.id.mImageButton);</code></pre>
+<ul>
+<li><p>匿名内部内方法实现setOnClickListener</p>
+<pre><code class="java">mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(&quot;button&quot;, &quot;我被点击了&quot;);
+                Toast.makeText(MainActivity.this, &quot;Test&quot;, Toast.LENGTH_SHORT).show();
+            }
+        });</code></pre>
+</li>
+<li><p>接口</p>
+<pre><code class="java">public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    @Override
+    public void onClick(View v) {
+        Log.i(&quot;Button&quot;, &quot;我又被点击了&quot;);
+        Toast.makeText(MainActivity.this, &quot;Test&quot;, Toast.LENGTH_SHORT).show();
+    }
+}</code></pre>
+<p><em>先寻找控件,再setOnClickListener, 否则会空指针</em></p>
+</li>
+</ul>
+<h2 id="EditText"><a href="#EditText" class="headerlink" title="EditText"></a>EditText</h2><pre><code class="xml">  &lt;EditText
+          android:hint=&quot;请输入用户名&quot;
+          android:phoneNumber=&quot;true&quot;
+          android:layout_width=&quot;wrap_content&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:id=&quot;@+id/mEditText&quot;
+          android:password=&quot;true&quot;
+          /&gt;</code></pre>
+<pre><code class="java">  private CharSequence temp;
+
+  TextView mTextView = findViewById(R.id.mTextView);
+  mTextView.addTextChangedListener(new TextWatcher() {
+              @Override
+              public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                  temp = s;
+              }
+
+              @Override
+              public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+              }
+
+              @Override
+              public void afterTextChanged(Editable s) {
+                  if(temp.length()&gt;10){
+                      Toast.makeText(MainActivity.this, &quot;超过字数限制&quot;, Toast.LENGTH_SHORT).show();
+                  }
+              }
+          });
+</code></pre>
+<h2 id="CheckBox"><a href="#CheckBox" class="headerlink" title="CheckBox"></a>CheckBox</h2><pre><code class="xml">   &lt;CheckBox
+          android:layout_width=&quot;wrap_content&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:text=&quot;是否记住密码&quot;
+          android:id=&quot;@+id/mCheckBox&quot;/&gt;</code></pre>
+<pre><code class="java">  CheckBox mCheckBox = findViewById(R.id.mCheckBox);
+  mButton.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  if (mCheckBox.isChecked()){
+                      Toast.makeText(MainActivity.this, &quot;选中了&quot;, Toast.LENGTH_LONG).show();
+                  }
+
+              }
+          });
+</code></pre>
+<h2 id="RadioButton"><a href="#RadioButton" class="headerlink" title="RadioButton"></a>RadioButton</h2><pre><code class="xml">  &lt;RadioGroup
+          android:layout_width=&quot;wrap_content&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:id=&quot;@+id/RG1&quot;&gt;&gt;
+
+          &lt;RadioButton
+              android:id=&quot;@+id/mRB1&quot;
+              android:layout_width=&quot;wrap_content&quot;
+              android:layout_height=&quot;wrap_content&quot;
+              android:checked=&quot;true&quot;
+              android:text=&quot;One&quot; /&gt;
+
+          &lt;RadioButton
+              android:id=&quot;@+id/mRB2&quot;
+              android:layout_width=&quot;wrap_content&quot;
+              android:layout_height=&quot;wrap_content&quot;
+              android:text=&quot;True&quot; /&gt;
+
+      &lt;/RadioGroup&gt;</code></pre>
+<pre><code class="java">  RadioGroup RG = findViewById(R.id.RG1);
+  RG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+          @Override
+          public void onCheckedChanged(RadioGroup group, int checkedId) {
+              if (checkedId == R.id.mRB1){
+                  Toast.makeText(MainActivity.this, &quot;One&quot;, Toast.LENGTH_LONG).show();
+                  }
+              else if(checkedId == R.id.mRB2){
+                  Toast.makeText(MainActivity.this, &quot;Two&quot;, Toast.LENGTH_LONG).show();
+                  }
+              }
+          });</code></pre>
+<h2 id="ProgressBar"><a href="#ProgressBar" class="headerlink" title="ProgressBar"></a>ProgressBar</h2><pre><code class="xml">  &lt;ProgressBar
+          android:layout_width=&quot;match_parent&quot;
+          android:id=&quot;@+id/mPB&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          style=&quot;?android:attr/progressBarStyleHorizontal&quot;
+          /&gt;</code></pre>
+<p>  android:progressBarStyle：默认进度条样式</p>
+<p>  android:progressBarStyleHorizontal：水平样式</p>
+<pre><code class="java">  private ProgressBar mPB;
+  mPB = findViewById(R.id.mPB);
+  private int flag = 0;
+
+  //子线程
+  private Handler handler = new Handler(){
+      @Override
+      public void handleMessage(@NonNull Message msg) {
+          switch(msg.what){
+              case 100:
+                  mPB.setProgress(flag);
+                  flag++;
+                  if (flag &lt; 100){
+                      handler.sendEmptyMessageDelayed(100, 100);
+               }
+               break;
+          }
+      }
+  };
+
+  mImageButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+          handler.sendEmptyMessageDelayed(100, 100);
+          }
+      });</code></pre>
+<p>  getMax()：返回这个进度条的范围的上限</p>
+<p>  getProgress()：返回进度</p>
+<p>  getSecondaryProgress()：返回次要进度</p>
+<p>  incrementProgressBy(int diff)：指定增加的进度</p>
+<p>  isIndeterminate()：指示进度条是否在不确定模式下</p>
+<p>  setIndeterminate(boolean indeterminate)：设置不确定模式下</p>
+<h2 id="ScrollView"><a href="#ScrollView" class="headerlink" title="ScrollView"></a>ScrollView</h2><pre><code class="xml">&lt;ScrollView
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;&gt;
+
+        &lt;LinearLayout
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;match_parent&quot;
+            android:orientation=&quot;vertical&quot;&gt;
+            &lt;RadioButton
+                android:id=&quot;@+id/mRB2&quot;
+                android:layout_width=&quot;wrap_content&quot;
+                android:layout_height=&quot;wrap_content&quot;
+                android:text=&quot;True&quot; /&gt;
+            ------------
+        &lt;/LinearLayout&gt;
+&lt;/ScrollView&gt;</code></pre>
+<h2 id="五大布局"><a href="#五大布局" class="headerlink" title="五大布局"></a>五大布局</h2><h3 id="LinearLayout-线性布局"><a href="#LinearLayout-线性布局" class="headerlink" title="LinearLayout 线性布局"></a><strong>LinearLayout</strong> <strong>线性布局</strong></h3><p>LinearLayout按照垂直或者水平的顺序依次排列子元素，每一个子元素都位于前一个元素之后。如果是垂直排列，那么将是一个N行单列的结构，每一行只会有一个元素，而不论这个元素的宽度为多少；如果是水平排列，那么将是一个单行N列的结构。如果搭建两行两列的结构，通常的方式是先垂直排列两个元素，每一个元素里再包含一个LinearLayout进行水平排列。</p>
+<p>LinearLayout中的子元素属性android:layout_weight生效，它用于描述该子元素在剩余空间中占有的大小比例。加入一行只有一个文本框，那么它的默认值就为0，如果一行中有两个等长的文本框，那么他们的android:layout_weight值可以是同为1。如果一行中有两个不等长的文本框，那么他们的android:layout_weight值分别为1和2，那么第一个文本框将占据剩余空间的三分之二，第二个文本框将占据剩余空间中的三分之一。android:layout_weight遵循数值越小，重要度越高的原则</p>
+<h3 id="FrameLayout-帧布局"><a href="#FrameLayout-帧布局" class="headerlink" title="FrameLayout 帧布局"></a><strong>FrameLayout</strong> <strong>帧布局</strong></h3><p>FrameLayout是五大布局中最简单的一个布局，在这个布局中，整个界面被当成一块空白备用区域，所有的子元素都不能被指定放置的位置，它们统统放于这块区域的左上角，并且后面的子元素直接覆盖在前面的子元素之上，将前面的子元素部分和全部遮挡。显示效果如下，第一个TextView被第二个TextView完全遮挡，第三个TextView遮挡了第二个TextView的部分位置。</p>
+<h3 id="AbsoluteLayout-绝对布局"><a href="#AbsoluteLayout-绝对布局" class="headerlink" title="AbsoluteLayout  绝对布局"></a><strong>AbsoluteLayout</strong>  <strong>绝对布局</strong></h3><p>AbsoluteLayout是绝对位置布局。在此布局中的子元素的android:layout_x和android:layout_y属性将生效，用于描述该子元素的坐标位置。屏幕左上角为坐标原点（0,0），第一个0代表横坐标，向右移动此值增大，第二个0代表纵坐标，向下移动，此值增大。在此布局中的子元素可以相互重叠。在实际开发中，通常不采用此布局格式，因为它的界面代码过于刚性，以至于有可能不能很好的适配各种终端。</p>
+<h3 id="RelativeLayout-相对布局"><a href="#RelativeLayout-相对布局" class="headerlink" title="RelativeLayout 相对布局"></a><strong>RelativeLayout</strong> <strong>相对布局</strong></h3><p>RelativeLayout按照各子元素之间的位置关系完成布局。在此布局中的子元素里与位置相关的属性将生效。例如android：layout_below, android:layout_above等。子元素就通过这些属性和各自的ID配合指定位置关系。注意在指定位置关系时，引用的ID必须在引用之前，先被定义，否则将出现异常。</p>
+<p>RelativeLayout是Android五大布局结构中最灵活的一种布局结构，比较适合一些复杂界面的布局。下面示例就展示这么一个情况，第一个文本框与父组件的底部对齐，第二个文本框位于第一个文本框的上方，并且第三个文本框位于第二个文本框的左方。</p>
+<blockquote>
+<p><strong>RelativeLayout里常用的位置属性如下：</strong></p>
+</blockquote>
+<ul>
+<li>android:layout_toLeftOf —— 该组件位于引用组件的左方</li>
+<li>android:layout_toRightOf —— 该组件位于引用组件的右方</li>
+<li>android:layout_above —— 该组件位于引用组件的上方</li>
+<li>android:layout_below —— 该组件位于引用组件的下方</li>
+<li>android:layout_alignParentLeft —— 该组件是否对齐父组件的左端</li>
+<li>android:layout_alignParentRight —— 该组件是否齐其父组件的右端</li>
+<li>android:layout_alignParentTop —— 该组件是否对齐父组件的顶部</li>
+<li>android:layout_alignParentBottom —— 该组件是否对齐父组件的底部</li>
+<li>android:layout_centerInParent —— 该组件是否相对于父组件居中</li>
+<li>android:layout_centerHorizontal —— 该组件是否横向居中</li>
+<li>android:layout_centerVertical —— 该组件是否垂直居中</li>
+</ul>
+<h3 id="TableLayout-表格布局"><a href="#TableLayout-表格布局" class="headerlink" title="TableLayout 表格布局"></a><strong>TableLayout</strong> <strong>表格布局</strong></h3><p>TableLayout顾名思义，此布局为表格布局，适用于N行N列的布局格式。一个TableLayout由许多TableRow组成，一个TableRow就代表TableLayout中的一行。</p>
+<p>TableRow是LinearLayout的子类，它的android:orientation属性值恒为horizontal，并且它的android:layout_width和android:layout_height属性值恒为MATCH_PARENT和WRAP_CONTENT。所以它的子元素都是横向排列，并且宽高一致的。这样的设计使得每个TableRow里的子元素都相当于表格中的单元格一样。在TableRow中，单元格可以为空，但是不能跨列。</p>
+<h2 id="AndroidnManifes"><a href="#AndroidnManifes" class="headerlink" title="AndroidnManifes"></a>AndroidnManifes</h2><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;com.example.viewpager&quot;&gt;
+
+    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+    &lt;---权限---&gt;
+
+    &lt;application
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme&quot;&gt;
+        &lt;activity android:name=&quot;.MainActivity&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<h1 id="Senior-View"><a href="#Senior-View" class="headerlink" title="Senior View"></a>Senior View</h1><h2 id="VideoView"><a href="#VideoView" class="headerlink" title="VideoView"></a>VideoView</h2><blockquote>
+<p><strong>步骤</strong></p>
+</blockquote>
+<p>1、在界面布局文件中定义VideoView组件，或在程序中创建VideoView组件</p>
+<p> 2、调用VideoView的如下两个方法来加载指定的视频</p>
+<p>​     setVidePath(String path)：加载path文件代表的视频</p>
+<p>​     setVideoURI(Uri uri)：加载uri所对应的视频</p>
+<p>3、调用VideoView的start()、stop()、psuse()方法来控制视频的播放</p>
+<p>//路径</p>
+<p>videoview.setVideoURI(Uri.parse(“android.resource://“+getPackageName()+”/“+R.raw.media)); </p>
+<p>//播放 </p>
+<p>videoview.start();</p>
+<p>//监听</p>
+<p>setOnCompletionListener</p>
+<pre><code class="xml">&lt;VideoView
+        android:id=&quot;@+id/video&quot;
+        android:layout_width=&quot;400dp&quot;
+        android:layout_height=&quot;400dp&quot; /&gt;
+
+    &lt;LinearLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:orientation=&quot;horizontal&quot;&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/start&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_weight=&quot;1&quot;
+            android:text=&quot;start&quot; /&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/stop&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_weight=&quot;1&quot;
+            android:text=&quot;stop&quot; /&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/pause&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_weight=&quot;1&quot;
+            android:text=&quot;pause&quot; /&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/resume&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_weight=&quot;1&quot;
+            android:text=&quot;resume&quot; /&gt;
+
+
+    &lt;/LinearLayout&gt;</code></pre>
+<pre><code class="java">package com.example.vidioview;
+
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.VideoView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.start){
+            videoView.start();
+        }
+        else if (v.getId() == R.id.pause){
+            videoView.pause();
+        }
+        else if(v.getId() == R.id.stop){
+            videoView.stopPlayback();
+        }
+        else if(v.getId() == R.id.resume){
+            videoView.resume();
+            }
+        }
+
+    private VideoView videoView;//定义控件
+    private Button btn_start, btn_stop, btn_pause, btn_resume;
+
+    /**
+    *初始化
+    */
+    private void initView() {
+        btn_resume = findViewById(R.id.resume);
+        btn_resume.setOnClickListener(this);
+        videoView = findViewById(R.id.video);
+        btn_stop = findViewById(R.id.stop);
+        btn_stop.setOnClickListener(this);
+        btn_start = findViewById(R.id.start);
+        btn_start.setOnClickListener(this);
+        btn_pause = findViewById(R.id.pause);
+        btn_pause.setOnClickListener(this);
+
+        /**
+         * 加载视频
+         */
+        videoView.setVideoURI(Uri.parse(&quot;android.resource://&quot; + getPackageName()+&quot;/&quot;+ R.raw.video));//视频移到raw文件夹后点下sync同步下资源
+
+        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                videoView.start();
+            }
+        });
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        initView();
+    }
+}</code></pre>
+<h2 id="Spinner"><a href="#Spinner" class="headerlink" title="Spinner"></a>Spinner</h2><p>Spinner提供了从一个数据集合中快速选择一项值的办法。默认情况下Spinner显示的是当前选择的值，点击Spinner会弹出一个包含所有可选值的dropdown菜单，从该菜单中可以为Spinner选择一个新值。</p>
+<pre><code class="xml">&lt;Spinner
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:id=&quot;@+id/mSpinner&quot;/&gt;</code></pre>
+<pre><code class="java">package com.example.spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    //下拉菜单
+    private Spinner mSpinner;
+    //数据
+    private String[] data = {&quot;北京&quot;,&quot;上海&quot;,&quot;广州&quot;,&quot;深圳&quot;};
+    //数据源, 给容器加载数据用
+    private ArrayAdapter&lt;String&gt;adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mSpinner = findViewById(R.id.mSpinner);
+        /**
+         * 上下文
+         * 布局文件/样式
+         * 数据
+         */
+        adapter = new ArrayAdapter&lt;String&gt;(this, android.R.layout.simple_list_item_1, data);
+        mSpinner.setAdapter(adapter);
+
+        //监听
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            //选中执行
+            @Override
+            public void onItemSelected(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, data[position], Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView&lt;?&gt; parent) {
+
+            }
+        });
+
+
+    }
+}</code></pre>
+<h2 id="TabHost"><a href="#TabHost" class="headerlink" title="TabHost"></a>TabHost</h2><p>activity_main.xml</p>
+<pre><code class="xml">&lt;TabHost
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:id=&quot;@android:id/tabhost&quot;&gt;
+
+        &lt;LinearLayout
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;match_parent&quot;
+            android:orientation=&quot;vertical&quot;&gt;
+
+            &lt;TabWidget
+                android:id=&quot;@android:id/tabs&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;wrap_content&quot; /&gt;
+
+            &lt;FrameLayout
+                android:id=&quot;@android:id/tabcontent&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;match_parent&quot;&gt;
+
+                &lt;LinearLayout
+                    android:id=&quot;@+id/tab1&quot;
+                    android:layout_width=&quot;match_parent&quot;
+                    android:layout_height=&quot;match_parent&quot;
+                    android:orientation=&quot;vertical&quot;&gt;
+
+                &lt;/LinearLayout&gt;
+
+                &lt;LinearLayout
+                    android:id=&quot;@+id/tab2&quot;
+                    android:layout_width=&quot;match_parent&quot;
+                    android:layout_height=&quot;match_parent&quot;
+                    android:orientation=&quot;vertical&quot;&gt;
+
+                &lt;/LinearLayout&gt;
+
+                &lt;LinearLayout
+                    android:id=&quot;@+id/tab3&quot;
+                    android:layout_width=&quot;match_parent&quot;
+                    android:layout_height=&quot;match_parent&quot;
+                    android:orientation=&quot;vertical&quot;&gt;
+
+                &lt;/LinearLayout&gt;
+            &lt;/FrameLayout&gt;
+        &lt;/LinearLayout&gt;
+    &lt;/TabHost&gt;</code></pre>
+<p>activity_tab1.xml</p>
+<pre><code class="xml">&lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;首页&quot;
+        android:textSize=&quot;50dp&quot;/&gt;</code></pre>
+<p>在AndroidManife注册</p>
+<pre><code class="xml">&lt;activity android:name=&quot;.Tab1Activity&quot;/&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<p>Tab1Activity.java</p>
+<pre><code class="java">package com.example.tabhost;
+
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Tab1Activity extends AppCompatActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tab1);
+    }
+}</code></pre>
+<p>MainActivity</p>
+<pre><code class="java">package com.example.tabhost;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ActionBar;
+import android.app.TabActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TabHost;
+
+public class MainActivity extends TabActivity {
+
+    //选项卡
+    private TabHost mTabHost;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //直接获取到TabHost 相当于FindViewById
+        //需要把TabHost的ID改成系统id:android:id=&quot;@android:id/tabhost&quot;
+        mTabHost = getTabHost();
+
+        //初始化
+        mTabHost.setup();
+
+        TabHost.TabSpec tabSpec1 = mTabHost.newTabSpec(&quot;tab1&quot;).setIndicator(&quot;首页&quot;).setContent(new Intent(this, Tab1Activity.class));
+        TabHost.TabSpec tabSpec2 = mTabHost.newTabSpec(&quot;tab2&quot;).setIndicator(&quot;新闻&quot;).setContent(new Intent(this, Tab1Activity.class));
+        TabHost.TabSpec tabSpec3 = mTabHost.newTabSpec(&quot;tab3&quot;).setIndicator(&quot;设置&quot;).setContent(new Intent(this, Tab1Activity.class));
+
+        mTabHost.addTab(tabSpec1);
+        mTabHost.addTab(tabSpec2);
+        mTabHost.addTab(tabSpec3);
+
+    }
+}</code></pre>
+<p>TabHost组件可以在界面中存放多个选项卡, 很多软件都使用了该组件进行设计;</p>
+<p><strong>TabWidget</strong> : 该组件就是TabHost标签页中上部 或者 下部的按钮, 可以点击按钮切换选项卡;</p>
+<p><strong>TabSpec</strong> : 代表了选项卡界面, 添加一个TabSpec即可添加到TabHost中;</p>
+<p>– <strong>创建选项卡</strong> : newTabSpec(String tag), 创建一个选项卡;</p>
+<p>– <strong>添加选项卡</strong> : addTab(tabSpec);</p>
+<p>a. <strong>定义布局</strong> : 在XML文件中<strong>使用TabHost</strong>组件<strong>, 并在其中</strong>定义一个<strong>FrameLayout选项卡</strong>内容;</p>
+<p>b. <strong>继承TabActivity</strong> : 显示选项卡组件的Activity<strong>继承TabActivity</strong>;</p>
+<p>c. <strong>获取组件</strong> : 通过调用<strong>getTabHost()方法</strong>, 获取TabHost对象;</p>
+<p>d. <strong>创建添加选项卡</strong> : 通过TabHost创建添加选项卡;</p>
+<h2 id="Gallery"><a href="#Gallery" class="headerlink" title="Gallery"></a>Gallery</h2><pre><code class="xml">&lt;Gallery
+        android:id=&quot;@+id/mGallery&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot; /&gt;</code></pre>
+<blockquote>
+<p><strong>java代码</strong></p>
+</blockquote>
+<pre><code class="java">package com.example.gallery;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import android.content.Context;
+import android.media.Image;
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    //画廊
+    private Gallery mGallery;
+    //图片源
+    private List&lt;Integer&gt;mList = new ArrayList&lt;&gt;();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        initView();
+
+    }
+
+    /**
+     * 初始化View
+     */
+    private void initView() {
+        mGallery = findViewById(R.id.mGallery);
+        initData();
+        mGallery.setAdapter(new mGalleryAdapter(this));
+    }
+
+    /**
+     * 初始化数据
+     */
+    private void initData() {
+        mList.add(R.drawable.img1);
+        mList.add(R.drawable.img2);
+        mList.add(R.drawable.img3);
+        mList.add(R.drawable.img4);
+    }
+
+    /**
+     * //Gallery的适配器
+     */
+    class mGalleryAdapter extends BaseAdapter{
+
+        //上下文
+        private Context mContext;
+        //构造方法
+        public mGalleryAdapter(Context mContext){
+            this.mContext = mContext;
+        }
+
+        /**
+         * 返回Item数量
+         */
+        @Override
+        public int getCount() {
+            if(mList != null){
+                return mList.size();
+            }
+            return 0;
+        }
+
+        /**
+         * 返回Item的下标
+         * @param position
+         * @return
+         */
+        @Override
+        public Object getItem(int position) {
+            return mList.get(position);
+        }
+
+        /**
+         * 下标
+         * @param position
+         * @return
+         */
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ImageView iv = new ImageView(mContext);
+            iv.setBackgroundResource(mList.get(position));
+            return iv;
+
+        }
+    }
+
+}</code></pre>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E9%95%BF%E7%9F%A5%E8%AF%86">长知识</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Android,">Android,</a>
+                
+                  <a class="hover-with-bg" href="/tags/JAVA">JAVA</a>
+                
+                  <a class="hover-with-bg" href="/tags/XML">XML</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'http://yifan.press/2020/03/20/长知识/ndroid学习/';
+        this.page.identifier = '/2020/03/20/长知识/ndroid学习/';
+      };
+      var oldLoad = window.onload;
+      window.onload = function () {
+        var d = document, s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.src = '//' + 'visitor' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="nofollow noopener noopener">comments
+        powered by Disqus.</a></noscript>
+  </div>
+
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Android学习&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
